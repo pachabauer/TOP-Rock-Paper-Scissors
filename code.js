@@ -1,24 +1,3 @@
-function computerPlay() {
-  const things = ["Rock", "Paper", "Scissors"];
-  const thing = things[Math.floor(Math.random() * things.length)];
-  return thing;
-}
-
-function playerPlay() {
-  const things = ["Rock", "Paper", "Scissors"];
-  let tLen = things.length;
-  let valid = false;
-  while (valid != true) {
-    let input = prompt("Choose Rock, Paper or Scissors");
-    input = input[0].toUpperCase() + input.substring(1);
-    for (let i = 0; i < tLen; i++) {
-      if (input == things[i]) {        
-        return input;
-      }
-    }
-  }
-}
-
 function playRound(playerSelection, computerSelection) {
   let playerScore = 0;
   let computerScore = 0;
@@ -54,20 +33,59 @@ function playRound(playerSelection, computerSelection) {
   return [playerScore, computerScore];
 }
 
-function game() {
-  let playerSum = 0;
-  let compuSum = 0;
-  for (let i = 0; i < 5; i++) {
-    let result = playRound(playerPlay(), computerPlay());
-    if (result[0] == 1) {
-      playerSum += 1;
-    } else if (result[1] == 1) {
-      compuSum += 1;
-    }
-  }
-  console.log(
-    `Game result:\nPlayer score: ${playerSum}\nComputer score: ${compuSum}`
-  );
+function computerPlay() {
+  const things = ["Rock", "Paper", "Scissors"];
+  const computerChoice = things[Math.floor(Math.random() * things.length)];
+  computerChoiceDisplay.textContent = computerChoice;
+  return computerChoice;
 }
 
-game();
+const playerChoiceDisplay = document.getElementById("player-choice");
+const computerChoiceDisplay = document.getElementById("computer-choice");
+const playerScoreDisplay = document.getElementById('player-score');
+const computerScoreDisplay = document.getElementById('computer-score');
+const gameResultDisplay = document.getElementById('game-result');
+
+
+const buttons = document.querySelectorAll("button");
+let playerChoice;
+let playerSum = 0;
+let compuSum = 0;
+
+buttons.forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    playerChoice = e.target.id;
+    playerChoiceDisplay.textContent = playerChoice;
+    let jugada = playRound(playerChoice, computerPlay());
+    playerSum += jugada[0];
+    playerScoreDisplay.textContent = playerSum;    
+    compuSum += jugada[1];
+    computerScoreDisplay.textContent = compuSum;
+    if (playerSum >= 5) {
+      gameResultDisplay.textContent = "GAME OVER, YOU WIN !!"
+      playerSum = 0;
+      compuSum = 0;
+    } else if( compuSum >= 5) {
+      gameResultDisplay.textContent = "GAME OVER, YOU LOSE !!"
+      playerSum = 0;
+      compuSum = 0;
+    } else {
+      gameResultDisplay.textContent = "";
+    }
+  })
+);
+
+function game() {
+  let playerResult = 0;
+  let compuResult = 0;
+  let result = playRound(playerChoice, computerPlay());
+  if (result[0] == 1) {
+    playerResult = 1;
+  } else if (result[1] == 1) {
+    compuResult = 1;
+  }
+  console.log(
+    `Game result:\nPlayer score: ${playerResult}\nComputer score: ${compuResult}`
+  );
+  return [playerResult, compuResult];
+}

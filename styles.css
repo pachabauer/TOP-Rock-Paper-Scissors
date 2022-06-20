@@ -1,0 +1,125 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(/fonts/Action_Man.ttf);
+}
+
+body {
+  background-color: rgb(0, 155, 119);
+}
+.scores {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 50px;
+  color: rgb(56, 7, 148);
+  font-size: 14px;
+  font-family: myFirstFont;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.selects {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+    to left,
+    white,
+    indigo,
+    orange,
+    blue,
+    black
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: myFirstFont;
+  font-size: 30px;
+}
+
+h3 {
+  margin: 20px;
+  padding: 20px;
+  font-size: 40px;
+  color: rgb(5, 39, 233);
+}
+
+#player-choice,
+#computer-choice {
+  font-size: 40px;
+  padding: 50px;
+  color: darkblue;
+}
+
+#computer-choice {
+  color: rgb(248, 102, 17);
+}
+
+#game-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  
+  background-image: linear-gradient(
+    to left,    
+    indigo,   
+    black,
+    red,
+    blue,
+    white 
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: myFirstFont;
+  font-size: 100px;
+}
+
+#Rock {
+  background-image: url(/images/rock.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 130px;
+  width: 110px;
+  border: none;
+}
+
+#Paper {
+  background-image: url(/images/paper.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 130px;
+  width: 100px;
+  border: none;
+}
+
+#Scissors {
+  background-image: url(/images/scissors.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 130px;
+  width: 130px;
+  border: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    font-family: myFirstFont;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: auto;
+    
+}
