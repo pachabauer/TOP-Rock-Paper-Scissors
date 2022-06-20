@@ -1,0 +1,35 @@
+[33mcommit e6436f96aafbb09cdad3c424d91824ad3bbac199[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: pachaB <eabestudio@gmail.com>
+Date:   Mon Jun 20 17:33:39 2022 -0300
+
+    Project pre-finished.
+    It's hard for me--> 80% advanced.
+
+[33mcommit e4b3174b17124b69c4400a2fcf01cb3817e28c1d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: pachaB <eabestudio@gmail.com>
+Date:   Fri Jun 10 12:43:24 2022 -0300
+
+    playerPlay method solve
+    Enjoy the game!
+
+[33mcommit ef55fd735b22940553c650700712f851bde88df8[m
+Author: pachaB <eabestudio@gmail.com>
+Date:   Fri Jun 10 11:33:20 2022 -0300
+
+    Implementation computerPlay(), game() methods
+    playerPlay() is pending
+
+[33mcommit 3e30f3ede44a4cc09cfb56144bff3ccbb543cd32[m
+Author: pachaB <eabestudio@gmail.com>
+Date:   Wed Jun 8 12:41:29 2022 -0300
+
+    Primer commit
+    Creo index.html
+    Creo code.js
+    Linkeo js al html
+
+[33mcommit 7eb9e1d3cb5e922fe8d6632971ad4d05a275628b[m
+Author: pachaB <41127804+pachabauer@users.noreply.github.com>
+Date:   Wed Jun 8 12:33:45 2022 -0300
+
+    Initial commit
